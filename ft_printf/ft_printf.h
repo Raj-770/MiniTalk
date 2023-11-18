@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:33:16 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/10/20 17:32:56 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/11/18 12:06:51 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include "libft/libft.h"
 
 typedef struct s_variables
 {
