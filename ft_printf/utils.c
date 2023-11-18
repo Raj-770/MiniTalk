@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 13:50:59 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/10/20 15:48:35 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/11/18 12:28:08 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_putstr(char *str, t_variables *var)
 	}
 	while (str[i])
 	{
-		if (ft_putchar_fd(str[i], 1, var) == -1)
+		if (putchar(str[i], 1, var) == -1)
 			return (-1);
 		i++;
 	}
@@ -43,7 +43,7 @@ int	ft_putnbr(int n, t_variables *var)
 	}
 	if (n < 0)
 	{
-		if (ft_putchar_fd('-', 1, var) == -1)
+		if (putchar('-', 1, var) == -1)
 			return (-1);
 		n = -n;
 	}
@@ -51,11 +51,11 @@ int	ft_putnbr(int n, t_variables *var)
 	{
 		if (ft_putnbr(n / 10, var) == -1)
 			return (-1);
-		if (ft_putchar_fd(((n % 10) + '0'), 1, var) == -1)
+		if (putchar(((n % 10) + '0'), 1, var) == -1)
 			return (-1);
 	}
 	else
-		if (ft_putchar_fd((n + '0'), 1, var) == -1)
+		if (putchar((n + '0'), 1, var) == -1)
 			return (-1);
 	return (0);
 }
@@ -67,11 +67,11 @@ int	ft_putunbr(unsigned int n, t_variables *var)
 	{
 		if (ft_putunbr(n / 10, var) == -1)
 			return (-1);
-		if (ft_putchar_fd(((n % 10) + '0'), 1, var) == -1)
+		if (putchar(((n % 10) + '0'), 1, var) == -1)
 			return (-1);
 	}
 	else
-		if (ft_putchar_fd((n + '0'), 1, var) == -1)
+		if (putchar((n + '0'), 1, var) == -1)
 			return (-1);
 	return (0);
 }
@@ -90,7 +90,7 @@ int	ft_puthexa(unsigned long n, char c, t_variables *var)
 		if (ft_puthexa(n / 16, c, var) == -1)
 			return (-1);
 	}
-	if (ft_putchar_fd(base[n % 16], 1, var) == -1)
+	if (putchar(base[n % 16], 1, var) == -1)
 		return (-1);
 	return (0);
 }
