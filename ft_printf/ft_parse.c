@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:50:09 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/11/18 12:27:13 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/11/20 15:02:06 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_parse(const char *input, va_list args, t_variables *var)
 			ft_format(input[var->i], args, var);
 		}
 		else
-			putchar(input[var->i], 1, var);
+			putchar_printf(input[var->i], 1, var);
 		var->i++;
 		if (var->error < 0)
 			return (-1);

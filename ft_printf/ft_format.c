@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:50:11 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/11/18 12:24:27 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/11/20 15:02:00 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 int	ft_format(char c, va_list args, t_variables *var)
 {
 	if (c == '%')
-		putchar('%', 1, var);
+		putchar_printf('%', 1, var);
 	else if (c == 'c')
-		putchar(va_arg(args, int), 1, var);
+		putchar_printf(va_arg(args, int), 1, var);
 	else if (c == 's')
 		ft_putstr(va_arg(args, char *), var);
 	else if (c == 'd')
@@ -38,7 +38,7 @@ int	ft_format(char c, va_list args, t_variables *var)
 }
 
 // Print Character (c == 'c')
-int	putchar(char c, int fd, t_variables *var)
+int	putchar_printf(char c, int fd, t_variables *var)
 {
 	int	output;
 

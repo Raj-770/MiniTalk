@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:33:16 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/11/18 12:23:50 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/11/20 15:01:38 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ typedef struct s_variables
 int	ft_printf(const char *input, ...);
 int	ft_parse(const char *input, va_list args, t_variables *var);
 int	ft_format(char c, va_list args, t_variables *var);
-int	putchar(char c, int fd, t_variables *var);
+int	putchar_printf(char c, int fd, t_variables *var);
 int	ft_putstr(char *str, t_variables *var);
 int	ft_putnbr(int n, t_variables *var);
 int	ft_putunbr(unsigned int n, t_variables *var);
