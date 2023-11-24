@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 11:58:58 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/11/20 15:22:42 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/11/23 13:52:11 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void	handle_signal(int signal_value)
 	if (i == 8)
 	{
 		c = (char)binary_char;
+		if (c == '\0')
 		write(1, &c, 1);
 		binary_char = 0;
 		i = 0;
