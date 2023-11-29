@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 11:58:58 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/11/27 12:04:08 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/11/28 19:54:58 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,12 @@ int	main(void)
 {
 	struct sigaction	sig_act;
 
-	ft_printf("%d", getpid());
+	ft_printf("%s\t __  __ _      _ _____     _ _\n", "\033[0;33m");
+	ft_printf("\t|  \\/  (_)_ _ (_)_   _|_ _| | |__\n");
+	ft_printf("\t| |\\/| | | ' \\| | | |/ _` | | / /\n");
+	ft_printf("\t|_|  |_|_|_||_|_| |_|\\__,_|_|_\\_\\\n\n");
+	ft_printf("⊱ ───────────────── {.⋅ ✯ ⋅.} ───────────────── ⊰\n\n");
+	ft_printf("%sPID: %d\n\n", "\033[0m", getpid());
 	sig_act.sa_flags = 0;
 	sig_act.sa_handler = handle_signal;
 	sigemptyset(&sig_act.sa_mask);

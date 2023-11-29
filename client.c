@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 12:02:51 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/11/20 15:27:13 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/11/28 18:26:12 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ int	main(int argc, char **argv)
 
 	i = 0;
 	if (argc != 3 || ft_strlen(argv[2]) == 0)
+	{
+		ft_printf("Too few arguments. Provide PID and Message as arguments.");
 		return (1);
+	}
 	if (ft_strlen(&argv[1][i]) == 0)
 		return (1);
 	while (argv[1][i])
